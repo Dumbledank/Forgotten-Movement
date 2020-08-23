@@ -7,11 +7,16 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    font-family: 'Walter Turncoat', 'Montserrat', sans-serif;
     /* position: relative; */
 }
 
 body, html {
     height: 100%;
+}
+
+.center {
+  text-align: center;
 }
 
 /* NAV */
@@ -23,6 +28,7 @@ body, html {
   height: 100%;
   background: #1e1e1e;
   transition: all 1s ease;
+  z-index: 10;
 }
 .sidebar header{
   font-size: 28px;
@@ -36,10 +42,10 @@ body, html {
 }
 .sidebar a{
   display: block;
-  height: 65px;
+  height: 80px;
   width: 100%;
   color: white;
-  line-height: 65px;
+  line-height: 80px;
   padding-left: 30px;
   box-sizing: border-box;
   border-bottom: 1px solid black;
@@ -79,13 +85,16 @@ label #btn,label #cancel{
   text-align: center;
   line-height: 45px;
   transition: all 1s ease;
+  z-index: 10;
 }
+
 label #cancel{
   opacity: 0;
   visibility: hidden;
 }
 #check:checked ~ .sidebar{
   left: 0;
+  transition: all 1s ease;
 }
 #check:checked ~ label #btn{
   margin-left: 270px;
@@ -97,12 +106,17 @@ label #cancel{
   opacity: 1;
   visibility: visible;
 }
-@media(max-width : 860px){
+
+/* RESPOSIVE SIDEBAR CSS WAS HERE */
+
+/* @media(max-width : 860px){
   .sidebar{
-    height: auto;
+    top: 50%;
+    height: 240px;
     width: 70px;
     left: 0;
-    margin: 100px 0;
+    margin-top: -120px;
+    z-index: 5;
   }
   header,#btn,#cancel{
     display: none;
@@ -114,7 +128,7 @@ label #cancel{
     visibility: hidden;
   }
   .sidebar a{
-    height: 60px;
+    height: 80px;
   }
   .sidebar a i{
     margin-left: -10px;
@@ -127,7 +141,7 @@ label #cancel{
     opacity: 1;
     visibility: visible;
   }
-}
+} */
 
 /* MAIN CONTENT */
 
@@ -139,6 +153,57 @@ label #cancel{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* color: #ffffff; */
+    /*! color: #ffffff; */
     height: 100%;
+    transition: all 2s ease;
+}
+
+@media screen and (max-width : 860px) {
+  #check:checked ~ .main{
+    -webkit-filter: blur(5px);
+    /* z-index: -10; */
+    transition: all 2s ease;
+  }
+  /* #check:checked ~ .main{
+    transition: all 1s ease;
+  } */
+  /* label #cancel{
+    opacity: 0;
+    visibility: hidden;
+  }
+  #check:checked ~ .sidebar{
+    left: 0;
+  }
+  #check:checked ~ label #btn{
+    margin-left: 270px;
+    opacity: 0;
+    visibility: hidden;
+  } */
+  /* #check:checked ~ label #cancel{
+    margin-left: 270px;
+    opacity: 1;
+    visibility: visible;
+  } */
+}
+
+#title-container {
+  position: relative;
+  /* top: 171px; */
+  top: 50%;
+  left: 50%;
+  height: 200px;
+  width: 400px;
+  margin-left: -200px;
+  margin-top: -100px;
+  /* padding: 0 5rem 2.5rem 5rem;
+  border: solid 1px #979797;
+  */ /*! background-color: #9dc20b; */ /*
+  border-radius: 4px; */
+  display: flex;
+  align-items: center;
+}
+
+#title-container h1 {
+  font-size: 4rem;
+  color: white;
 }
