@@ -26,7 +26,7 @@ h1 {
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 /* NAV */
@@ -198,10 +198,10 @@ label #cancel{
   /* top: 171px; */
   top: 50%;
   left: 50%;
-  height: 420px;
+  height: 520px;
+  margin-top: -260px;
   width: 600px;
   margin-left: -300px;
-  margin-top: -210px;
 }
 
 #contact-title-container {
@@ -210,9 +210,9 @@ label #cancel{
   top: 50%;
   left: 50%;
   height: 200px;
+  margin-top: -100px;
   width: 600px;
   margin-left: -300px;
-  margin-top: -100px;
 }
 
 @media screen and (max-width : 600px) {
@@ -220,24 +220,27 @@ label #cancel{
     position: relative;
     top: 50%;
     left: 50%;
-    height: 420px;
-    width: 440px;
-    margin-left: -220px;
-    margin-top: -210px;
+    /* height: 600px; */
+    /* margin-top: -300px; */
+    width: 400px;
+    margin-left: -200px;
   }
   #contact-title-container {
     position: relative;
     top: 50%;
     left: 50%;
     height: 200px;
-    width: 440px;
-    margin-left: -220px;
+    width: 400px;
+    margin-left: -200px;
     margin-top: -100px;
+  }
+  #about-text-container p {
+    font-size: 1.2rem;
   }
 }
 
 #about-text-container, #contact-text-container {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 0 10px;
 }
 
